@@ -9,6 +9,7 @@ import {
 
 import CategoryForm from "../../components/CategoryForm";
 import Modal from "../../components/Modal";
+import AdminMenu from "./AdminMenu";
 
 const CategoriesList = () => {
   const [name, setName] = useState("");
@@ -88,6 +89,7 @@ const CategoriesList = () => {
 
   return (
     <div className="ml-[12rem] flex flex-col md:flex-row">
+      <AdminMenu />
       <div className="md:w-3/4 p-3">
         <div className="h-12 font-bold">Manage Categories</div>
         <CategoryForm

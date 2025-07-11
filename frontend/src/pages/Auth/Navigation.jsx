@@ -12,6 +12,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useLogoutMutation } from '../../redux/api/userSlice';
 import { logout } from '../../redux/features/auth/authSlice';
 import { RiArrowDropDownLine } from "react-icons/ri";
+import FavouriteCount from '../Products/FavouriteCount';
 
 
 const Navigation = () => {
@@ -78,9 +79,10 @@ const Navigation = () => {
             </Link>
            </div>
            <div className='flex flex-col justify-center   space-y-4'>
-            <Link to="/favourite" className='flex items-center transition-transform transform hover:translate-x-2'>
+            <Link to="/favourites" className='flex items-center transition-transform transform hover:translate-x-2'>
                <LuFolderHeart className='mr-2 '  size="26"/>
                <span className='hidden nav-item-name '>FAVOURITE</span>
+               <FavouriteCount />
             </Link>
            </div>
            </div>
